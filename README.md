@@ -1,6 +1,6 @@
-# Library Managemt System
+# Library Management System
 
-# Core Features:
+Core Features:
 
 Complete book management (add, edit, delete, search)
 Advanced search by title, author, ID, and availability status
