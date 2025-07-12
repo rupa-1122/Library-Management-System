@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <h1>Library Management System</h1>
+                    <p>Manage your library collection with ease and efficiency</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Area -->
+        <div id="message" class="message-container"></div>
+
+        <!-- Statistics Dashboard -->
+        <div class="stats-grid">
+            <div class="stat-card stat-primary">
+                <div class="stat-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="totalBooks">0</div>
+                    <div class="stat-label">Total Books</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-success">
+                <div class="stat-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="availableBooks">0</div>
+                    <div class="stat-label">Available</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-warning">
+                <div class="stat-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12,6 12,12 16,14"></polyline>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="checkedOutBooks">0</div>
+                    <div class="stat-label">Checked Out</div>
+                </div>
+            </div>
+            
+            <div class="stat-card stat-danger">
+                <div class="stat-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="overdueBooks">0</div>
+                    <div class="stat-label">Overdue</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Book Form -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+                <h2>Add New Book</h2>
+            </div>
+            
+            <form id="addBookForm" class="book-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="title">Book Title *</label>
+                        <input type="text" id="title" name="title" required placeholder="Enter book title">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="author">Author *</label>
+                        <input type="text" id="author" name="author" required placeholder="Enter author name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" name="genre" placeholder="Enter genre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="publicationYear">Publication Year</label>
+                        <input type="number" id="publicationYear" name="publicationYear" min="1000" max="2024" placeholder="2024">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Book to Library
+                </button>
+            </form>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+                <h2>Search & Filter Books</h2>
+            </div>
+            
+            <div class="search-controls">
+                <div class="form-group search-input">
+                    <label for="searchTerm">Search Books</label>
+                    <div class="input-with-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="searchTerm" placeholder="Search by title, author, or ID...">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="searchFilter">Search In</label>
+                    <select id="searchFilter">
+                        <option value="all">All Fields</option>
+                        <option value="title">Title</option>
+                        <option value="author">Author</option>
+                        <option value="id">ID</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="availabilityFilter">Availability</label>
+                    <select id="availabilityFilter">
+                        <option value="all">All Books</option>
+                        <option value="available">Available</option>
+                        <option value="checked-out">Checked Out</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Books Grid -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </div>
+                <h2>All Books (<span id="bookCount">0</span>)</h2>
+            </div>
+            
+            <div id="booksContainer" class="books-grid">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading books...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
