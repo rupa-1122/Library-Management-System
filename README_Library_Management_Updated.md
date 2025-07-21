@@ -50,7 +50,7 @@ Library-Management-System/
 
 ### 📖 Dashboard View
 
-![Library Dashboard](./images/dashboard.png)
+![Library Dashboard](https://raw.githubusercontent.com/rupa-1122/Library-Management-System/refs/heads/main/Dashboard.png)
 
 ---
 
@@ -76,11 +76,18 @@ cd Library-Management-System
 ## 📬 Contact
 
 **Rupa Padala**  
-📧 Email: your.email@example.com  
+📧 Email: padalarupa1122@gmail.com  
 🔗 GitHub: [rupa-1122](https://github.com/rupa-1122)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License]
+Copyright (c) 2025 Rupa Padala
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+
+[truncated for brevity]
